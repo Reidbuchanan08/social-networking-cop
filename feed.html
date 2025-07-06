@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -146,4 +147,154 @@
   </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TimeSpace Feed</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- If JavaScript is disabled, auto-redirect to login -->
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=index.html">
+  </noscript>
+
+  <style>
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: navy;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    .top-bar button, .top-bar select {
+      margin-left: 10px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .sign-out-btn { background-color: crimson; }
+    .add-user-btn { background-color: seagreen; color: white; }
+    .view-users-btn { background-color: #4444aa; color: white; }
+
+    .feed-container {
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .post-box {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .post-box textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+      margin-bottom: 10px;
+      min-height: 80px;
+    }
+
+    .post-box button {
+      align-self: flex-end;
+      background-color: navy;
+      color: white;
+    }
+
+    .post {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 15px;
+    }
+
+    .post .meta {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .screen-time {
+      margin: 20px 0;
+      text-align: center;
+      font-size: 16px;
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-bar">
+    <span id="usernameDisplay"></span>
+    <button class="add-user-btn" onclick="addUser()">Add User</button>
+    <button class="view-users-btn" onclick="viewUsers()">View Users</button>
+    <select id="userDropdown" onchange="changeUser()" style="padding: 6px; border-radius: 6px;"></select>
+    <button class="sign-out-btn" id="signOutBtn">Sign Out</button>
+  </div>
+
+  <header>
+    <h1>TimeSpace Feed 📣</h1>
+  </header>
+
+  <div class="feed-container">
+    <div class="screen-time" id="screenTime"></div>
+
+    <div class="post-box">
+      <textarea id="postContent" placeholder="What's on your mind?"></textarea>
+      <button onclick="addPost()">Post</button>
+    </div>
+
+    <div id="feed">
+      <div class="post">
+        <div class="meta">TimeSpace Bot · Just now</div>
+        <p>Welcome to the TimeSpace community! 🎉 Drop your first post above.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; TimeSpace</p>
+  </footer>
+
+  <!-- Inline redirect check in case app.js fails -->
+  <script>
+    // Quick redirect check for username and startTime presence
+    (function() {
+      const username = localStorage.getItem("username");
+      const startTime = localStorage.getItem("startTime");
+      if (!username || !startTime) {
+        window.location.href = "index.html";
+      }
+    })();
+  </script>
+
+  <!-- Main application script -->
+  <script src="app.js" defer></script>
+
+  <script>
+    window.onload = () => {
+      startFeedTimer();
+      document.getElementById("signOutBtn").onclick = signOut;
+
+      const username = localStorage.getItem("username");
+      document.getElementById("usernameDisplay").textContent = username ? `Signed in as ${username}` : "";
+
+      updateUserDropdown();
+    };
+  </script>
+
+</body>
+>>>>>>> d0da356c5a6de8db41f85a6e6f774db3cb81eba5
 </html>
