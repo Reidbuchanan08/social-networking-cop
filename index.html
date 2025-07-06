@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <style>
+    .screen-time {
+      margin-top: 20px;
+      font-size: 16px;
+      color: green;
+    }
+    .login-box button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: navy;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .login-box button:hover {
+      background-color: #000f66;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome</h1>
+  </header>
+
+  <div class="container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <div class="input-group">
+        <span class="icon">👤</span>
+        <input type="text" id="username" placeholder="Username">
+      </div>
+      <div class="input-group">
+        <span class="icon">🔒</span>
+        <input type="password" id="password" placeholder="Password">
+      </div>
+      <button type="submit" onclick="signIn()">Sign In</button>
+      <div id="screenTime" class="screen-time"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; TimeSpace</p>
+  </footer>
+
+</body>
+</html>
+
