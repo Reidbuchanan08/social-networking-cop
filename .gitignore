@@ -1,0 +1,20 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# IDE / editor settings
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# Backup & temp files
+*.txt
+*.docx
+*.zip
+*~
+~*
+
+# Config backups
+config/*.backup.json
