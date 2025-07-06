@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header, footer {
+  background-color: navy;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-box {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 320px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.login-box h2 {
+  margin-bottom: 25px;
+  color: navy;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group .icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+  border-color: navy;
+  box-shadow: 0 0 8px rgba(0,0,128,0.2);
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: navy;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #000066;
+  transform: translateY(-2px);
+}
+
+/* Screen time text */
+.screen-time {
+  margin-top: 20px;
+  font-size: 16px;
+  color: green;
+}
+
+/* Sign out button */
+.sign-out-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.sign-out-btn:hover {
+  background-color: darkred;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+  .login-box {
+    width: 100%;
+    padding: 30px 20px;
+  }
+}
