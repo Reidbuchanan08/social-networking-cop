@@ -32,7 +32,12 @@ Phase I establishes the foundation for this system, including a working user int
 4. Navigate to the feed page.
 5. Use the platform as intended and observe screen time alerts.
 
-> **Note:** No external dependencies or packages required. All functionality runs client-side using vanilla HTML, CSS, and JavaScript.
+## Dependencies
+
+- **None**  
+  This project uses only vanilla HTML, CSS, and JavaScript.  
+  Just open `index.html` in your browser—no installations needed.
+
 
 ---
 
@@ -88,3 +93,4 @@ Preliminary **unit tests** on timer control and alert trigger functions were con
 ## License
 
 For academic use only — CMSC 495 6982 Capstone in Computer Science, University of Maryland Global Campus, Summer 2025.
+
