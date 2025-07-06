@@ -1,0 +1,4 @@
+{
+  "dailyLimitSeconds": 1200,
+  "weeklyLimitSeconds": 7200
+}
