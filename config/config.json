@@ -1,4 +1,18 @@
 {
-  "dailyLimitSeconds": 1200,
-  "weeklyLimitSeconds": 7200
+  "name": "TimeSpace",
+  "version": "2.0.0",
+  "description": "A lightweight web app to help users track daily and weekly screen time with social interaction features.",
+  "main": "index.html",
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "features": [
+    "User sign-in and session logging",
+    "Daily and weekly screen time limits with alerts",
+    "Interactive user feed for posting updates",
+    "User switching and persistent local storage",
+    "Downloadable session logs",
+    "Friendly UI with animations and notifications"
+  ]
 }
+
