@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  background: linear-gradient(to bottom, #f8fbff, #dee8f4);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -27,6 +27,7 @@ footer {
 }
 
 /* Login Page */
+
 .login-box {
   background-color: #ffffff;
   padding: 40px 30px;
@@ -76,6 +77,7 @@ footer {
 }
 
 /* Buttons */
+
 button {
   width: 100%;
   padding: 12px;
@@ -94,7 +96,6 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* Sign Out Button */
 .sign-out-btn {
   margin-top: 20px;
   padding: 12px 20px;
@@ -113,14 +114,17 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* Screen time text */
+/* Screen Time Text */
+
 .screen-time {
   margin-top: 20px;
   font-size: 16px;
   color: green;
+  animation: fadeIn 0.6s ease;
 }
 
 /* Responsive Design */
+
 @media (max-width: 400px) {
   .login-box {
     width: 100%;
@@ -128,11 +132,7 @@ button:hover {
   }
 }
 
-/* Feed Page Enhancements     */
-
-body {
-  background: linear-gradient(to bottom, #f8fbff, #dee8f4);
-}
+/* Feed Page Enhancements */
 
 .top-bar {
   display: flex;
@@ -158,13 +158,6 @@ body {
   margin: 0 auto;
 }
 
-header {
-  text-align: center;
-  background-color: #ffffff;
-  padding: 20px 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
 .post-box {
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -181,6 +174,12 @@ header {
   resize: vertical;
   min-height: 80px;
   font-size: 14px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.post-box textarea:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1.01);
 }
 
 .post-box button {
@@ -193,6 +192,12 @@ header {
   cursor: pointer;
   font-weight: bold;
   float: right;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.post-box button:hover {
+  background-color: #000066;
+  transform: translateY(-2px);
 }
 
 .post {
@@ -202,6 +207,7 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   margin-bottom: 16px;
   transition: transform 0.2s;
+  animation: fadeInUp 0.4s ease;
 }
 
 .post:hover {
@@ -225,4 +231,25 @@ footer {
   background-color: navy;
   color: white;
   margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
