@@ -1,84 +1,72 @@
-
-# Social Networking Cop – Phase I
+# Social Networking Cop – Phase II
 
 ## Project Overview
 
-The **Social Networking Cop** is a web-based application designed to promote healthier screen time habits by monitoring and alerting users when they exceed preset daily and weekly usage limits on a faux social media platform called **TimeSpace**.  
+**Social Networking Cop** is a browser-based application that promotes healthier screen time habits using a faux social media platform called **TimeSpace**. Users can log in, post updates, and receive alerts based on daily and weekly time usage. 
 
-Phase I establishes the foundation for this system, including a working user interface, time-tracking logic, and alert functionality.
+Phase II builds on the Phase I foundation with significant enhancements to the user interface, usability, and tracking functionality.
+
+---
+
+## Phase II Enhancements
+
+- 💻 Redesigned and animated UI using modern CSS
+- 👤 Username auto-fill on login for ease of use
+- 📋 Improved visual feed layout and styled notifications
+- 🕒 Refined timer logic and localStorage session persistence
+- 📁 Session log file download on sign-out
+- 🔁 Multi-user dropdown with live switching
+- 🧪 Cleaner code structure for easier testing and expansion
 
 ---
 
 ## Project Structure
 
-```
 /SocialNetworkingCop
-│
-├── index.html         # Login page (available upon request)
-├── feed.html          # Main social media feed interface (included in submission)
-├── app.js             # JavaScript time-tracking logic (available upon request)
-├── style.css          # CSS styling (available upon request)
-├── README.md          # Project documentation
-└── PhaseI_Source_Code_Document.docx  # Formal phase report
-```
+├── index.html # Login page with friendly UI and auto-fill
+├── feed.html # Main feed with post box and timer display
+├── app.js # JavaScript logic for timers, posts, and session logs
+├── style.css # Responsive and animated styling
+├── config.json # Optional metadata about the app features
+├── README.md # This file
+└── PhaseII_Source_Code_Document.docx # Formal report
 
 ---
 
 ## Setup Instructions
 
-1. Clone or download the project files to your local machine.
-2. Open `index.html` in a modern web browser (Safari, Chrome, or Edge recommended).
-3. Log in with any username.
-4. Navigate to the feed page.
-5. Use the platform as intended and observe screen time alerts.
-
-## Dependencies
-
-- **None**  
-  This project uses only vanilla HTML, CSS, and JavaScript.  
-  Just open `index.html` in your browser—no installations needed.
-
+1. Clone or download the repository.
+2. Open `index.html` in a modern browser (Chrome, Safari, Edge).
+3. Enter a username to sign in.
+4. Post a message and track your screen time.
+5. Sign out to download a session log.
 
 ---
 
 ## Technologies Used
 
-- **HTML5**  
-- **CSS3**  
-- **JavaScript (ES6)**  
-- **LocalStorage API**  
-- **Visual Studio Code**  
-- **Safari Developer Tools**
+- **HTML5**
+- **CSS3** with animations and transitions
+- **JavaScript (ES6)**
+- **LocalStorage API**
+- **Visual Studio Code**
 
 ---
 
 ## Testing
 
-**Manual Black-Box Testing** was conducted in Phase I to verify:
-- Accurate time tracking post-login.
-- Proper display of daily and weekly alert prompts.
-- Local storage functionality for persisting session data.
-
-Preliminary **unit tests** on timer control and alert trigger functions were conducted through console logs and scenario-based testing.
+- ✅ **Manual Black-Box Testing** for all login, time tracking, and alert features
+- ✅ Verified session log generation and storage in localStorage
+- ✅ Drop-down user switching tested across browser reloads
+- ✅ Validated UI responsiveness and animations
 
 ---
 
-## Known Issues (Phase I)
+## Known Limitations (Phase II)
 
-- No server-side components implemented.
-- No persistent database; data only stored in local storage.
-- No media (photos/videos) functionality by design.
-- Limited styling; UI optimized for function-first demonstration.
-
----
-
-## Next Steps (Phase II)
-
-- Refine UI design.
-- Add detailed session logs.
-- Enhance local storage management.
-- Explore basic data export options.
-- Implement improved user management.
+- Local-only storage; no backend server
+- No user authentication (by design)
+- Single-browser scope for data persistence
 
 ---
 
@@ -93,4 +81,3 @@ Preliminary **unit tests** on timer control and alert trigger functions were con
 ## License
 
 For academic use only — CMSC 495 6982 Capstone in Computer Science, University of Maryland Global Campus, Summer 2025.
-
